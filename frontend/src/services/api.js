@@ -5,7 +5,7 @@ const cache = new Map();
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000',
+  baseURL: import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000',
   headers: {
     'Content-Type': 'application/json',
   },

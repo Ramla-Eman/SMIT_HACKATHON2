@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 import Admin from './models/admin.js';
 import dotenv from 'dotenv'
-dotenv.config();
+dotenv.config({ path: './backend/.env' });
+import connectDB from './config/database.js';
 
-mongoose.connect(process.env.MONGODB_URI);
+connectDB();
 
 const createAdmin = async () => {
   try {

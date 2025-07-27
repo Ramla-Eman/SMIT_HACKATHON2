@@ -30,7 +30,15 @@ const Header = () => {
           </nav>
 
           {/* Theme Toggle Button */}
-          <ThemeToggle />
+          <div className="flex items-center justify-center gap-6">
+            <ThemeToggle />
+          <Link
+            to="/admin/login"
+            className="inline-flex items-center justify-center px-6 py-3 border border-app text-app  font-medium rounded-lg transition duration-300 ease-in-out"
+          >
+            Admin Login
+          </Link>
+          </div>
         </div>
       </div>
     </header>

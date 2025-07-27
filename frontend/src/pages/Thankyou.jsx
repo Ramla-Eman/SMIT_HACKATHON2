@@ -60,7 +60,7 @@ const Thankyou = () => {
 
             <Link
               to="/admin/login"
-              className="inline-flex items-center justify-center px-6 py-3 border border-app text-app hover:bg-gray-100 dark:hover:bg-gray-700 font-medium rounded-lg transition duration-300 ease-in-out"
+              className="inline-flex items-center justify-center px-6 py-3 border border-app text-app font-medium rounded-lg transition duration-300 ease-in-out"
             >
               Admin Login
             </Link>
