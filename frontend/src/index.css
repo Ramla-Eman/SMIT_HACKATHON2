@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import "tailwindcss";
+
+
+
+:root {
+  /* Light Theme Colors */
+  --color-primary: #3b82f6;
+  --color-secondary: #10b981;
+  --color-background: #f9fafb;
+  --color-card: #ffffff;
+  --color-text: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+
+  /* Font Family */
+  --font-family: "Lato", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Dark Theme Colors */
+.dark {
+  --color-primary: #60a5fa;
+  --color-secondary: #34d399;
+  --color-background: #111827;
+  --color-card: #1f2937;
+  --color-text: #f9fafb;
+  --color-text-secondary: #9ca3af;
+  --color-border: #374151;
+  --color-success: #34d399;
+  --color-error: #f87171;
+}
+
+/* Custom Utility Classes */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-app {
+  background-color: var(--color-background);
+}
+.bg-card {
+  background-color: var(--color-card);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-app {
+  color: var(--color-text);
+}
+.text-secondary-app {
+  color: var(--color-text-secondary);
+}
+
+.border-app {
+  border-color: var(--color-border);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  @apply p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-white;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  border-top-color: var(--color-primary);
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Table */
+@media (max-width: 640px) {
+  .table-responsive thead {
+    display: none;
+  }
+
+  .table-responsive tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+
+  .table-responsive tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+  }
+
+  .table-responsive tbody td::before {
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
